@@ -7,6 +7,8 @@ RUN apt-get update && apt-get install -y \
     php5enmod mcrypt && \
     a2enmod php5
 
+RUN sed -i 's/short_open_tag = Off/short_open_tag = On/g' /etc/php5/apache2/php.ini
+
 # Define working directory.
 WORKDIR /
 
