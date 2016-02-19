@@ -12,7 +12,9 @@ WORKDIR /
 VOLUME "/var/www"
 VOLUME "/tmp"
 
-RUN echo '#!/bin/bash' > /init.sh
+RUN echo '#!/bin/bash' > /init.sh && \
+    echo 'service apache2 start' >> /init.sh &&
+
 RUN chmod +x /init.sh
 
 # Define default command.
