@@ -12,7 +12,7 @@ WORKDIR /
 VOLUME "/var/www"
 VOLUME "/tmp"
 
-RUN echo '#!/bin/bash' > /init.sh && \
+RUN echo '#!/bin/bash' > /init.sh
 RUN chmod +x /init.sh
 
 # Define default command.
