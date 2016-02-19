@@ -14,6 +14,7 @@ VOLUME "/tmp"
 
 RUN echo '#!/bin/bash' > /init.sh 
 RUN echo 'service apache2 start' >> /init.sh
+RUN echo 'tail -f /var/log/apache2/access.log' >> /init.sh
 RUN chmod +x /init.sh
 
 # Define default command.
